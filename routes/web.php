@@ -21,11 +21,11 @@ use Illuminate\Support\Facades\Route;
 
 // 5 pages => home, about, contact, team, services
   
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
 });
-
-/*Route::get('/', function () {
+*/
+Route::get('/', function () {
     return 'home page';
 });
 
@@ -44,4 +44,8 @@ Route::get('/team', function () {
 Route::get('/services', function () {
     return 'services page';
 });
-*/ 
+
+Route::get('user/{name}', function ($name) {
+    return 'user'. $name;
+});
+
